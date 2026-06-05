@@ -75,7 +75,7 @@ The proposed framework contains the following major components:
 ## Installation
 
 ```bash
-git clone https://github.com/[username]/DualManifold-VehicleReID.git
+git clone https://github.com/[hidayetergn]/DualManifold-VehicleReID.git
 cd DualManifold-VehicleReID
 
 conda create -n vehicle-reid python=3.10
@@ -108,9 +108,9 @@ This repository supports the following datasets:
 
 | Dataset   | Task                      | Status    |
 | --------- | ------------------------- | --------- |
-| VeRi-776  | Vehicle Re-ID             | Supported |
-| VehicleID | Vehicle Re-ID             | Supported |
-| VeRi-Wild | Large-scale Vehicle Re-ID | Supported |
+| VeRi-776  | Vehicle Re-ID             | Supported Image|
+| VehicleID | Vehicle Re-ID             | Supported Link |
+| VRU       | Vehicle Re-ID             | Supported Link |
 
 Expected dataset layout:
 
@@ -125,10 +125,10 @@ data/
 │   └── test_list.txt
 │
 ├── VehicleID/
-│   └── ...
+│   └── Download Link
 │
 └── VeRi-Wild/
-    └── ...
+    └── Download Link
 ```
 
 Please download the datasets from their official sources and update the corresponding paths in the configuration files under `configs/`.
@@ -143,22 +143,6 @@ Example training command for VeRi-776:
 python scripts/train.py \
   --config configs/veri776.yaml \
   --output outputs/veri776_experiment
-```
-
-For VehicleID:
-
-```bash
-python scripts/train.py \
-  --config configs/vehicleid.yaml \
-  --output outputs/vehicleid_experiment
-```
-
-For VeRi-Wild:
-
-```bash
-python scripts/train.py \
-  --config configs/veriwild.yaml \
-  --output outputs/veriwild_experiment
 ```
 
 ---
@@ -186,24 +170,15 @@ The evaluation script reports standard vehicle re-identification metrics:
 
 | Method          | Rank-1 | Rank-5 |  mAP |
 | --------------- | -----: | -----: | ---: |
-| Baseline        |   XX.X |   XX.X | XX.X |
-| Proposed Method |   XX.X |   XX.X | XX.X |
+| Proposed Method |  97.87 |  99.26 | 90.78|
 
 ### VehicleID
 
 | Test Split | Rank-1 | Rank-5 |
 | ---------- | -----: | -----: |
-| Small      |   XX.X |   XX.X |
-| Medium     |   XX.X |   XX.X |
-| Large      |   XX.X |   XX.X |
-
-### VeRi-Wild
-
-| Test Split | Rank-1 | Rank-5 |  mAP |
-| ---------- | -----: | -----: | ---: |
-| Small      |   XX.X |   XX.X | XX.X |
-| Medium     |   XX.X |   XX.X | XX.X |
-| Large      |   XX.X |   XX.X | XX.X |
+| Small      |  98.09 |  99.48 |
+| Medium     |  97.21 |  98.76 |
+| Large      |  95.72 |  98.20 |
 
 ---
 
@@ -214,19 +189,6 @@ The evaluation script reports standard vehicle re-identification metrics:
 </p>
 
 The qualitative retrieval examples demonstrate that the proposed model can distinguish visually similar vehicles under challenging camera viewpoints, illumination conditions and attribute-level similarities.
-
----
-
-## Ablation Study
-
-| Component              | Rank-1 |  mAP |
-| ---------------------- | -----: | ---: |
-| Baseline               |   XX.X | XX.X |
-| + Attribute Branch     |   XX.X | XX.X |
-| + Vehicle Part Pooling |   XX.X | XX.X |
-| + Confusable Mining    |   XX.X | XX.X |
-| + Memory Learning      |   XX.X | XX.X |
-| Full Model             |   XX.X | XX.X |
 
 ---
 
@@ -248,9 +210,9 @@ If you find this work useful, please cite:
 
 ```bibtex
 @article{ergin2026dualmanifold,
-  title   = {[Paper Title]},
-  author  = {Ergin, Hidayet and [Co-authors]},
-  journal = {[Journal Name]},
+  title   = {[Feature-Based Vehicle Re-identification using Nonlinear Methods]},
+  author  = {Ergin, Hidayet and KEÇELİ, Ali Seydi},
+  journal = {[]},
   year    = {2026}
 }
 ```
@@ -262,9 +224,7 @@ If you find this work useful, please cite:
 For questions, suggestions or collaborations, please contact:
 
 **Hidayet Ergin**
-Email: [your-email]
-GitHub: [your-github-profile]
-
+Email: [hidayetergin@hacettepe.edu.tr]
 ---
 
 ## License
