@@ -217,16 +217,6 @@ If you find this work useful, please cite:
 }
 ```
 
----
-
-## Contact
-
-For questions, suggestions or collaborations, please contact:
-
-**Hidayet Ergin**
-Email: [hidayetergin@hacettepe.edu.tr]
----
-
 ## License
 
 This project is released under the terms specified in the `LICENSE` file.
