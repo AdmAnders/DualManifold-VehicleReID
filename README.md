@@ -63,10 +63,7 @@ The proposed framework contains the following major components:
 ├── paper/                # LaTeX manuscript files
 ├── results/              # Quantitative and qualitative results
 ├── scripts/              # Training, testing and visualization scripts
-├── src/                  # Main source code
 ├── requirements.txt      # Python dependencies
-├── CITATION.cff          # Citation metadata
-├── LICENSE               # License information
 └── README.md
 ```
 
